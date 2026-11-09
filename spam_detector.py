@@ -7,10 +7,10 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.metrics import precision_score, recall_score
 
-# Load the email data
+
 data = pd.read_csv("data/emails.csv")
 
-# Select the features
+
 X = data[
     [
         "word_count",
@@ -22,27 +22,26 @@ X = data[
     ]
 ]
 
-# Select the answers
+
 y = data["label"]
 
-# Split the data into training and testing groups
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.25, random_state=42, stratify=y
 )
 
-# Create the spam detector
+
 model = LogisticRegression(max_iter=1000)
 
-# Train the model
+
 model.fit(X_train, y_train)
 
-# Test the model
+
 predictions = model.predict(X_test)
 
-# Calculate accuracy
+
 accuracy = accuracy_score(y_test, predictions)
 
-# Calculate precision and recall
+l
 precision = precision_score(y_test, predictions, zero_division=0)
 recall = recall_score(y_test, predictions, zero_division=0)
 
@@ -51,10 +50,10 @@ print("Accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
 
-# Create confusion matrix
+
 matrix = confusion_matrix(y_test, predictions, labels=[0, 1])
 
-# Get the four results
+
 tn, fp, fn, tp = matrix.ravel()
 
 print("\nCONFUSION MATRIX RESULTS")
@@ -64,7 +63,7 @@ print("Legitimate correctly passed:", tn)
 print("Legitimate wrongly marked as spam:", fp)
 print("Spam wrongly let through:", fn)
 
-# Display confusion matrix
+
 plt.imshow(matrix, cmap="Blues")
 plt.title("Spam Detector Confusion Matrix")
 plt.xlabel("Predicted Result")
@@ -76,7 +75,7 @@ plt.yticks([0, 1], ["Legitimate", "Spam"])
 plt.colorbar()
 plt.show()
 
-# Display feature weights
+
 print("\nFEATURE WEIGHTS")
 
 features = X.columns
@@ -85,7 +84,6 @@ weights = model.coef_[0]
 for i in range(len(features)):
     print(features[i], ":", round(weights[i], 3))
 
-# Test three additional emails
 test_emails = [
     "Hi! You have been selected for a FREE cash reward. Have a great day!",
 
