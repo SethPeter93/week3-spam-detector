@@ -1,0 +1,17 @@
+email_text,label,word_count,exclamations,money_words,all_caps,urgency_words,suspicious_links
+You won free money! Claim your prize now!,1,8,2,3,0,2,0
+URGENT! You won a cash reward!,1,6,2,2,1,1,0
+Make money fast from home today!,1,6,1,1,0,1,0
+Claim your free gift immediately!,1,5,1,2,0,2,0
+WIN BIG! Your cash prize is waiting!,1,7,2,2,2,0,0
+Get a loan today with no questions!,1,7,1,1,0,1,0
+Limited offer! Claim your bonus now!,1,6,2,1,0,3,0
+You have won a free vacation!,1,6,1,1,0,0,0
+Are we still meeting for lunch tomorrow?,0,7,0,0,0,0,0
+The meeting starts at 2 PM today.,0,7,0,0,1,1,0
+Please return your library book Friday.,0,6,0,0,0,0,0
+Thanks for sending me the homework.,0,6,0,0,0,0,0
+The school office is closed Monday.,0,6,0,0,0,0,0
+Can you send me the pictures?,0,6,0,0,0,0,0
+Your appointment is Tuesday at 10 AM.,0,7,0,0,1,0,0
+Here is the recipe we discussed.,0,6,0,0,0,0,0
